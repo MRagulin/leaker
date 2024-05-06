@@ -22,9 +22,12 @@ pip install -r requirements.txt
     TABLE_PERFORMANCE_SIZE=1000
     DEBUG = True
     ```
-2. Создаем в базу данных в MySQL
+2. Создаем в базу данных и пользователя в MySQL
    ```
    CREATE DATABASE leaker;
+   CREATE USER 'leakeruser'@'%' IDENTIFIED BY 'B54jWvyPaFdtXW7C4yYB#';
+   GRANT ALL PRIVILEGES ON leaker.* TO 'leakeruser'@'%';
+   FLUSH PRIVILEGES;
    ```
 3. Запускаем проект
    1. docker run -it -p5000:5000 leaker:v0.1

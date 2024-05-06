@@ -25,7 +25,7 @@ pip install -r requirements.txt
 2. Создаем в базу данных и пользователя в MySQL
    ```
    CREATE DATABASE leaker;
-   CREATE USER 'leakeruser'@'%' IDENTIFIED BY 'B54jWvyPaFdtXW7C4yYB#';
+   CREATE USER 'leakeruser'@'%' IDENTIFIED BY 'Password';
    GRANT ALL PRIVILEGES ON leaker.* TO 'leakeruser'@'%';
    FLUSH PRIVILEGES;
    ```

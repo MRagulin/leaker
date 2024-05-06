@@ -44,7 +44,7 @@ pip install -r requirements.txt
       3. Указываем колонки (можно объединять: 9 3 6+5+11)
 
 ### Известные проблемы и варианты решения
-    1. pymysql.err.DataError: (1366, "Incorrect string value: '\\...')
+    1. pymysql.err.DataError: (1366, "Incorrect string value: '\\...'")
     
     Лечение, заходим в MySQL:
     ```

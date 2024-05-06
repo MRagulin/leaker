@@ -41,4 +41,15 @@ pip install -r requirements.txt
    2. Определяем данные
       1. Указываем имя и url источника
       2. Указывает разделитель 
-      3. Указываем колонки (можно объединять: 1 3 5+6+7)
+      3. Указываем колонки (можно объединять: 9 3 6+5+11)
+
+### Известные проблемы и варианты решения
+    1. pymysql.err.DataError: (1366, "Incorrect string value: '\\...')
+    
+    Лечение, заходим в MySQL:
+    ```
+        ALTER DATABASE leaker CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci;
+        ALTER TABLE data CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+        ALTER TABLE source CHANGE fio VARCHAR(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+    ```
+    
